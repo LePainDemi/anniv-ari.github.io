@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eec2ff;
+  font-family: Arial, sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  position: relative;
+  animation: glow 3s linear infinite, pulse 1.5s ease-in-out infinite;
+}
+
+img {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-top: 20px;
+  border: 5px solid #000;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 30px red, 0 0 60px orange, 0 0 90px yellow, 0 0 120px green, 0 0 150px cyan, 0 0 180px blue, 0 0 210px violet; }
+  14% { text-shadow: 0 0 30px orange, 0 0 60px yellow, 0 0 90px green, 0 0 120px cyan, 0 0 150px blue, 0 0 180px violet, 0 0 210px red; }
+  28% { text-shadow: 0 0 30px yellow, 0 0 60px green, 0 0 90px cyan, 0 0 120px blue, 0 0 150px violet, 0 0 180px red, 0 0 210px orange; }
+  42% { text-shadow: 0 0 30px green, 0 0 60px cyan, 0 0 90px blue, 0 0 120px violet, 0 0 150px red, 0 0 180px orange, 0 0 210px yellow; }
+  56% { text-shadow: 0 0 30px cyan, 0 0 60px blue, 0 0 90px violet, 0 0 120px red, 0 0 150px orange, 0 0 180px yellow, 0 0 210px green; }
+  70% { text-shadow: 0 0 30px blue, 0 0 60px violet, 0 0 90px red, 0 0 120px orange, 0 0 150px yellow, 0 0 180px green, 0 0 210px cyan; }
+  84% { text-shadow: 0 0 30px violet, 0 0 60px red, 0 0 90px orange, 0 0 120px yellow, 0 0 150px green, 0 0 180px cyan, 0 0 210px blue; }
+  100% { text-shadow: 0 0 30px red, 0 0 60px orange, 0 0 90px yellow, 0 0 120px green, 0 0 150px cyan, 0 0 180px blue, 0 0 210px violet; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}

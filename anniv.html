@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anniversaire de Ari</title>
+<link rel="stylesheet" href="anniv.css">
+</head>
+<body>
+
+<h1>Joyeux Anniversaire Ari 🎉</h1>
+<img src="./clique_pas.jpg" alt="Image anniversaire" />
+<h2>(clique sur l'image)</h2>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  const title = document.querySelector('h1');
+  document.body.addEventListener('click', () => {
+    confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
+  });
+</script>
+
+</body>
+</html>
